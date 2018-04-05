@@ -1,0 +1,822 @@
+{
+  "kind": "books#volumes",
+  "totalItems": 4996,
+  "items": [
+    {
+      "kind": "books#volume",
+      "id": "MoNSDwAAQBAJ",
+      "etag": "q0JtoltKMtk",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/MoNSDwAAQBAJ",
+      "volumeInfo": {
+        "title": "In Search of the Good Life",
+        "subtitle": "Emmanuel Levinas, Psychoanalysis and the Art of Living",
+        "authors": [
+          "Paul Marcus"
+        ],
+        "publisher": "Routledge",
+        "publishedDate": "2018-03-21",
+        "description": "Emmanuel Levinas (1906-1995), French phenomenological philosopher and Talmudic commentator, is regarded as perhaps the greatest ethical philosopher of our time. While Levinas enjoys prominence in the philosophical and scholarly community, especially in Europe, there are few if any books or articles written that take Levinas's extremely difficult to understand, if not obtuse, philosophy and apply it to the everyday lives of real people struggling to give greater meaning and purpose, especially ethical meaning, to their personal lives. This book attempts to fill in the large gap in the Levinas literature, mainly through using a Levinasian-inspired, ethically-infused psychoanalytic approach.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780429914799"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0429914792"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 240,
+        "printType": "BOOK",
+        "categories": [
+          "Psychology"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "1.1.1.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=MoNSDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=MoNSDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.co.in/books?id=MoNSDwAAQBAJ&printsec=frontcover&dq=search+Good&hl=&cd=1&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=MoNSDwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://market.android.com/details?id=book-MoNSDwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 3138.8,
+          "currencyCode": "INR"
+        },
+        "retailPrice": {
+          "amount": 3138.8,
+          "currencyCode": "INR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=MoNSDwAAQBAJ&rdid=book-MoNSDwAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 3.1388E9,
+              "currencyCode": "INR"
+            },
+            "retailPrice": {
+              "amountInMicros": 3.1388E9,
+              "currencyCode": "INR"
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.in/books/download/In_Search_of_the_Good_Life-sample-epub.acsm?id=MoNSDwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.in/books/download/In_Search_of_the_Good_Life-sample-pdf.acsm?id=MoNSDwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=MoNSDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "This book attempts to fill in the large gap in the Levinas literature, mainly through using a Levinasian-inspired, ethically-infused psychoanalytic approach."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "NvDyPAvBjzAC",
+      "etag": "zeMJR5H7wbw",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/NvDyPAvBjzAC",
+      "volumeInfo": {
+        "title": "The Search for Good Government",
+        "subtitle": "Understanding the Paradox of Italian Democracy",
+        "authors": [
+          "Filippo Sabetti"
+        ],
+        "publisher": "McGill-Queen's Press - MQUP",
+        "publishedDate": "2002",
+        "description": "Observers have frequently noted that Italians seem skilled at many things – but not at good government. As a people Italians are said to have flair, panache, and tenacity, while as a polity Italy is in shambles. This paradoxical view of politics can be found in Italian history as far back as Guicciardini and Machiavelli. Nor is it unique to Italy, for the social dilemma of \"rational individuals and irrational society\" has, since Hobbes, produced a large literature on social theory and comparative politics, as well as numerous questionable suggestions for policy. In The Search for Good Government Filippo Sabetti examines Italian politics to reassess habitual presumptions in comparative politics, opening new territory in the art and science of institutional analysis. Sabetti argues that poor government performance in contemporary Italy has been an unintended consequence of attempts to craft institutions for good – or democratic – government. He shows that, contrary to the conventional wisdom, a chief problem in contemporary Italy is not the absence of the rule of law but, rather, the presence of rule by law or too many laws. A principal conclusion of his study is that postwar Italian politics can best be understood as a laboratory for revealing how and why a search for good government can generate antithetical and counter intentional results. The Italian experience has important implications for all those who aspire to be self-governing – as opposed to state-governed – for it shows what people can do to enhance human cooperation in collective-action dilemmas and suggests the probable results if \"democracy\" continues to be identified with parliamentary government and representative assemblies rather than with the universality of the village or the local community. The Search for Good Government changes our understanding of postwar Italian politics and provides new ways to evaluate the impact of the political changes that have occurred since 1992, arguing for a perceptual shift in the way we think about politics and the educative role of public institutions.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0773524851"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780773524859"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 313,
+        "printType": "BOOK",
+        "categories": [
+          "Political Science"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.0.1.0.preview.3",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=NvDyPAvBjzAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=NvDyPAvBjzAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.co.in/books?id=NvDyPAvBjzAC&pg=PA117&dq=search+Good&hl=&cd=2&source=gbs_api",
+        "infoLink": "http://books.google.co.in/books?id=NvDyPAvBjzAC&dq=search+Good&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/The_Search_for_Good_Government.html?hl=&id=NvDyPAvBjzAC"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.in/books/download/The_Search_for_Good_Government-sample-epub.acsm?id=NvDyPAvBjzAC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.in/books/download/The_Search_for_Good_Government-sample-pdf.acsm?id=NvDyPAvBjzAC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=NvDyPAvBjzAC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Such disasters have, however, tended to obscure the fact that they are the \u003cbr\u003e\nunintended consequences of attempts to craft institutions and policy instruments \u003cbr\u003e\nof \u003cb\u003egood\u003c/b\u003e government. Perhaps one of the clearest illustrations of the gaps \u003cbr\u003e\nbetween preferred solutions and the actual behaviour of government agencies, \u003cbr\u003e\nbetween \u003cb\u003egood\u003c/b\u003e intentions and bad results, is the case of urban planning in \u003cbr\u003e\npostwar Rome. The design of detailed master plans and the effort to follow them \u003cbr\u003e\nhave led to the inability&nbsp;..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "a6tIQXti4rIC",
+      "etag": "7RUqes/kpTA",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/a6tIQXti4rIC",
+      "volumeInfo": {
+        "title": "In Search of the Common Good",
+        "authors": [
+          "Dennis McCann",
+          "Patrick D. Miller"
+        ],
+        "publisher": "A&C Black",
+        "publishedDate": "2005-02-04",
+        "description": "Biblical scholars and theologians search for the meaning of the common good for our time.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0567027708"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780567027702"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 360,
+        "printType": "BOOK",
+        "categories": [
+          "Religion"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.0.3.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=a6tIQXti4rIC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=a6tIQXti4rIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.co.in/books?id=a6tIQXti4rIC&pg=PA96&dq=search+Good&hl=&cd=3&source=gbs_api",
+        "infoLink": "http://books.google.co.in/books?id=a6tIQXti4rIC&dq=search+Good&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/In_Search_of_the_Common_Good.html?hl=&id=a6tIQXti4rIC"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.in/books/download/In_Search_of_the_Common_Good-sample-epub.acsm?id=a6tIQXti4rIC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=a6tIQXti4rIC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "... Aquinas observes that the \u003cb\u003egood\u003c/b\u003e of the political community is said by Aristotle to \u003cbr\u003e\nbe more divine than the private \u003cb\u003egood\u003c/b\u003e of an individual, because it more closely \u003cbr\u003e\nattains a likeness of God, who is the supreme cause of all \u003cb\u003egoods\u003c/b\u003e (50.1.1.2), and \u003cbr\u003e\nin his commentary on Peter Lombard&#39;s Sentences, he speaks of God Himself as a \u003cbr\u003e\ncommon \u003cb\u003egood\u003c/b\u003e (In I Sent. 49.1.1.1 ad 3).s However, when we turn to Aquinas&#39;s \u003cbr\u003e\ncomments on the common \u003cb\u003egood\u003c/b\u003e in \u003cb\u003esearch\u003c/b\u003e of a substantive account of the social \u003cbr\u003e\n\u003cb\u003egood\u003c/b\u003e,&nbsp;..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "_YLKXdzILikC",
+      "etag": "1DZUTqLL5UI",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/_YLKXdzILikC",
+      "volumeInfo": {
+        "title": "In Search of the Good Life",
+        "subtitle": "A Pedogogy for Troubled Times",
+        "authors": [
+          "Fred Dallmayr"
+        ],
+        "publisher": "University Press of Kentucky",
+        "publishedDate": "2007-08-31",
+        "description": "The great German novelist Thomas Mann implored readers to resist the persistent and growing militarism of the mid-twentieth century. To whom should we turn for guidance during this current era of global violence, political corruption, economic inequality, and environmental degradation? For more than two millennia, the world’s great thinkers have held that the ethically “good life” is the highest purpose of human existence. Renowned political philosopher Fred Dallmayr traces the development of this notion, finding surprising connections among Aristotelian ethics, Abrahamic and Eastern religious traditions, German idealism, and postindustrial social criticism. In Search of the Good Life does not offer a blueprint but rather invites readers on a cross-cultural quest. Along the way, the author discusses the teachings of Aristotle, Confucius, Nicolaus of Cusa, Leibniz, and Schiller, in addition invoking more recent writings of Gadamer and Ricoeur, as guideposts and sources of hope during our troubled times. Among contemporary themes Dallmayr discusses are the role of the classics in education, proper and improper ways of spreading democracy globally, the possibility of transnational citizenship, the problem of politicized evil, and the role of religion in our predominantly secular culture. Dallmayr restores the notion of the good life as a hallmark of personal conduct, civic virtue, and political engagement, and as the road map to enduring peace. In Search of the Good Life seeks to arouse complacent and dispirited citizens, guiding them out of the distractions of shallow amusements and perilous resentments in the direction of mutual learning and civic pedagogy—a direction that will enable them to impose accountability on political leaders who stray from fundamental ethical standards.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0813172683"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780813172682"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 336,
+        "printType": "BOOK",
+        "categories": [
+          "Political Science"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "1.3.2.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=_YLKXdzILikC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=_YLKXdzILikC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.co.in/books?id=_YLKXdzILikC&pg=PA174&dq=search+Good&hl=&cd=4&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=_YLKXdzILikC&source=gbs_api",
+        "canonicalVolumeLink": "https://market.android.com/details?id=book-_YLKXdzILikC"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 3643.25,
+          "currencyCode": "INR"
+        },
+        "retailPrice": {
+          "amount": 3643.25,
+          "currencyCode": "INR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=_YLKXdzILikC&rdid=book-_YLKXdzILikC&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 3.64325E9,
+              "currencyCode": "INR"
+            },
+            "retailPrice": {
+              "amountInMicros": 3.64325E9,
+              "currencyCode": "INR"
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=_YLKXdzILikC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "But the real and vital conception of freedom is that it is the possibility of \u003cb\u003egood\u003c/b\u003e and \u003cbr\u003e\nevil.19 In discussing idealism, Schelling also reviews correctives introduced by \u003cbr\u003e\nenlightenment thinkers such as fichte and Kant. fichte&#39;s decision to construe the \u003cbr\u003e\nhighest pinnacle of philosophy as “subjective activity and freedom” seemed to \u003cbr\u003e\nenergize monism, but it failed to show how the rest of the world (including nature \u003cbr\u003e\nand the realm of things) was rooted in “subjective activity.” In the case of Kant, \u003cbr\u003e\nfreedom&nbsp;..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "b_BXCFv2iboC",
+      "etag": "USHoEsfrmnw",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/b_BXCFv2iboC",
+      "volumeInfo": {
+        "title": "In Search of the Good Life",
+        "subtitle": "The Ethics of Globalization",
+        "authors": [
+          "Rebecca Todd Peters"
+        ],
+        "publisher": "A&C Black",
+        "publishedDate": "2006-03-03",
+        "description": "Provides a helpful overview of the complicated contemporary debates about globalization. This book argues that our moral task is to ensure that globalization proceeds in ways that honour creation and life, and that any theory of globalization ought to be grounded in values that emphasize a democratized understanding of power.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0826418589"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780826418586"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 240,
+        "printType": "BOOK",
+        "categories": [
+          "Religion"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.0.2.0.preview.3",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=b_BXCFv2iboC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=b_BXCFv2iboC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.co.in/books?id=b_BXCFv2iboC&pg=PA32&dq=search+Good&hl=&cd=5&source=gbs_api",
+        "infoLink": "http://books.google.co.in/books?id=b_BXCFv2iboC&dq=search+Good&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/In_Search_of_the_Good_Life.html?hl=&id=b_BXCFv2iboC"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.in/books/download/In_Search_of_the_Good_Life-sample-epub.acsm?id=b_BXCFv2iboC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=b_BXCFv2iboC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "... Ethics 1 1 ( 1 99 1 ): 3- 1 7. 1 1 . Rasmussen, &quot;Power Analysis,&quot; 7. 12. For \u003cbr\u003e\nexample, if I start an organization and I structure the decision-making process in \u003cbr\u003e\nsuch a way that I must approve all decisions that are made, I have created a \u003cbr\u003e\nhierarchical model of governance. If I structure the organization so that decisions \u003cbr\u003e\nare made collectively or different people are empowered to make different kinds \u003cbr\u003e\nof decisions, then the organization can be said to be using 32 In \u003cb\u003eSearch\u003c/b\u003e of the \u003cbr\u003e\n\u003cb\u003eGood\u003c/b\u003e Life."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "G0mlBAAAQBAJ",
+      "etag": "GbR2FhtTBTs",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/G0mlBAAAQBAJ",
+      "volumeInfo": {
+        "title": "Politics and the Search for the Common Good",
+        "authors": [
+          "Hans Sluga"
+        ],
+        "publisher": "Cambridge University Press",
+        "publishedDate": "2014-10-23",
+        "description": "This book is a vigorous reassessment of the nature of politics and political theorizing.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781107068469"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1107068460"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 272,
+        "printType": "BOOK",
+        "categories": [
+          "Philosophy"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=G0mlBAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=G0mlBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.co.in/books?id=G0mlBAAAQBAJ&pg=PA4&dq=search+Good&hl=&cd=6&source=gbs_api",
+        "infoLink": "http://books.google.co.in/books?id=G0mlBAAAQBAJ&dq=search+Good&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Politics_and_the_Search_for_the_Common_G.html?hl=&id=G0mlBAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=G0mlBAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "That we engage in this \u003cb\u003esearch\u003c/b\u003e does not mean that there is a determinate \u003cb\u003egood\u003c/b\u003e to \u003cbr\u003e\nbe found. We can certainly \u003cb\u003esearch\u003c/b\u003e for unicorns though there is no such beast. A \u003cbr\u003e\ncomposer may \u003cb\u003esearch\u003c/b\u003e for the perfect harmony when there is no such thing and \u003cbr\u003e\nwe have to be content, instead, with the history of music. So also in politics. The \u003cbr\u003e\n\u003cb\u003esearch\u003c/b\u003e for the common \u003cb\u003egood\u003c/b\u003e carries us forward even when there is no fixed \u003cbr\u003e\nterminal point to it. We are left thus with the history of the \u003cb\u003esearch\u003c/b\u003e which is the \u003cbr\u003e\nhistory of&nbsp;..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "q789DwAAQBAJ",
+      "etag": "Et9Q6kZcUis",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/q789DwAAQBAJ",
+      "volumeInfo": {
+        "title": "In Search of the Good Society",
+        "authors": [
+          "Malcolm McIntosh"
+        ],
+        "publisher": "Routledge",
+        "publishedDate": "2017-11-09",
+        "description": "Compelling reading, this book both reinforces and elevates the role of art in the exploration and analysis of the concepts of democracy, globalization and capitalism. In the book, the author describes a post-human world, a state we have already entered. But how should we think about it, given we have already been co-opted? Can we articulate the future outside the false discipline that the market often dictates, beyond the clutches of a few social media companies, and maintain our rich diversities while holding on to those things that make life possible and worthwhile: love, hope and art? Running throughout the book is the central theme of uncertainty and divergence. It is uncompromising in asking the question about the need for a new global creation story, which has at its core not the certainties of one defined creation myth but the need to feel comfortable with the uncertainty principle both in physics and the political economy. It is up to artists, scientists and philosophers to articulate this wonder and to help us write a new global creation story based on art (the arts), uncertainty, diversity, risk and wonder – and of course knowledge. This book has the capacity to both clarify and re-shape your thinking.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781351241830"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1351241834"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 270,
+        "printType": "BOOK",
+        "categories": [
+          "Business & Economics"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "1.1.1.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=q789DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=q789DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.co.in/books?id=q789DwAAQBAJ&pg=PT183&dq=search+Good&hl=&cd=7&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=q789DwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://market.android.com/details?id=book-q789DwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 3458.09,
+          "currencyCode": "INR"
+        },
+        "retailPrice": {
+          "amount": 3458.09,
+          "currencyCode": "INR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=q789DwAAQBAJ&rdid=book-q789DwAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 3.45809E9,
+              "currencyCode": "INR"
+            },
+            "retailPrice": {
+              "amountInMicros": 3.45809E9,
+              "currencyCode": "INR"
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.in/books/download/In_Search_of_the_Good_Society-sample-epub.acsm?id=q789DwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.in/books/download/In_Search_of_the_Good_Society-sample-pdf.acsm?id=q789DwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=q789DwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "\u003cb\u003esearch\u003c/b\u003e. of. the. \u003cb\u003egood\u003c/b\u003e. society. in. the. post-human. world. This book&#39;s title is a \u003cbr\u003e\nreference to the esteemed and much-awarded economist G.K. Galbraith&#39;s 1996 \u003cbr\u003e\nbook The \u003cb\u003eGood\u003c/b\u003e Society: The Humane Agenda.192 In that excellent book he lays \u003cbr\u003e\nthe groundwork for a \u003cb\u003egood\u003c/b\u003e society operating within a capitalist economy. As a \u003cbr\u003e\nselfdeclared liberal, he was denounced by some in the extreme USA as a \u003cbr\u003e\nCommunist, and yet all he had said accords with how most Europeans, \u003cbr\u003e\nAustralasians and&nbsp;..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "k6bnyGb8w3sC",
+      "etag": "5P6n5OnO4P0",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/k6bnyGb8w3sC",
+      "volumeInfo": {
+        "title": "In Search of Good Form",
+        "subtitle": "Gestalt Therapy with Couples and Families",
+        "authors": [
+          "Joseph C. Zinker"
+        ],
+        "publisher": "Taylor & Francis",
+        "publishedDate": "2013-04-15",
+        "description": "In this sequel to Creative Processing Gestalt Therapy (1976), Joseph Zinker applies basic Gestalt precepts to intimate couple and family relationships. Zinker emphasises seeing and being with as keys to a phenomenological approach in which therapist andpatient co-create and mutually articulate their own experiences and meanings.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781135061692"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1135061696"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 352,
+        "printType": "BOOK",
+        "categories": [
+          "Psychology"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "2.3.0.0.preview.1",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=k6bnyGb8w3sC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=k6bnyGb8w3sC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.co.in/books?id=k6bnyGb8w3sC&pg=PA35&dq=search+Good&hl=&cd=8&source=gbs_api",
+        "infoLink": "http://books.google.co.in/books?id=k6bnyGb8w3sC&dq=search+Good&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/In_Search_of_Good_Form.html?hl=&id=k6bnyGb8w3sC"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=k6bnyGb8w3sC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "All of these concepts just presented— the experience cycle, presence, \u003cbr\u003e\nphenomenological observation, and apperceptive intuition — help make the \u003cbr\u003e\ntherapists&#39; own \u003cb\u003egood\u003c/b\u003e form in their \u003cb\u003esearch\u003c/b\u003e for the \u003cb\u003egood\u003c/b\u003e form of the client-system. \u003cbr\u003e\nThe idea of \u003cb\u003egood\u003c/b\u003e form will be implicitly demonstrated in the following chapters, \u003cbr\u003e\nalthough not directly discussed again until the last chapter. I do this intentionally \u003cbr\u003e\nso as to allow the reader to become absorbed in the principles, techniques, and \u003cbr\u003e\ncase examples."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "TfHGAAAAQBAJ",
+      "etag": "GwNPllQ557Q",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/TfHGAAAAQBAJ",
+      "volumeInfo": {
+        "title": "China’s Search for Good Governance",
+        "authors": [
+          "D. Zhenglai"
+        ],
+        "publisher": "Springer",
+        "publishedDate": "2011-10-10",
+        "description": "Governance has emerged as a central concept and key word in China's governmental and local policy and practice at different levels. This edited collection combines empirical and normative researches as well as theoretical exploration and case studies on the governance theories and practices in China.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780230337589"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0230337589"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 244,
+        "printType": "BOOK",
+        "categories": [
+          "Political Science"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "2.5.2.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=TfHGAAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=TfHGAAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.co.in/books?id=TfHGAAAAQBAJ&pg=PA6&dq=search+Good&hl=&cd=9&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=TfHGAAAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://market.android.com/details?id=book-TfHGAAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 6301.2,
+          "currencyCode": "INR"
+        },
+        "retailPrice": {
+          "amount": 6301.2,
+          "currencyCode": "INR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=TfHGAAAAQBAJ&rdid=book-TfHGAAAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 6.3012E9,
+              "currencyCode": "INR"
+            },
+            "retailPrice": {
+              "amountInMicros": 6.3012E9,
+              "currencyCode": "INR"
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.in/books/download/China_s_Search_for_Good_Governance-sample-epub.acsm?id=TfHGAAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.in/books/download/China_s_Search_for_Good_Governance-sample-pdf.acsm?id=TfHGAAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=TfHGAAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "In Chapter 1, “\u003cb\u003eGood\u003c/b\u003e Governance and Legitimacy,” Yu Keping argues that sources \u003cbr\u003e\nof legitimacy change over time when faced with new challenges. \u003cb\u003eGood\u003c/b\u003e \u003cbr\u003e\ngovernance will be the most important source of any government&#39;s legitimacy in \u003cbr\u003e\nthe twenty-first century. This chapter seeks to theoretically define the concept of “\u003cbr\u003e\n\u003cb\u003egood\u003c/b\u003e governance” and its eight key elements, and explain why \u003cb\u003egood\u003c/b\u003e governance \u003cbr\u003e\nhas become the most important source of legitimacy as we enter the twenty-first \u003cbr\u003e\ncentury."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "tlUMBAAAQBAJ",
+      "etag": "1x8WDMlHVbE",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/tlUMBAAAQBAJ",
+      "volumeInfo": {
+        "title": "Elliot N. Dorff",
+        "subtitle": "In Search of the Good Life",
+        "authors": [
+          "Hava Tirosh-Samuelson",
+          "Aaron W. Hughes"
+        ],
+        "publisher": "BRILL",
+        "publishedDate": "2014-07-18",
+        "description": "Rabbi Elliot N. Dorff, the Sol and Anne Dorff Distinguished Professor of Philosophy and Rector of American Jewish University in Los Angeles, is one of today’s leading Jewish ethicists. In Search of a Good Life presents influential essays by Dorff and explains his contribution to Jewish religious thought in the second half of the 20th century.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9789004279025"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "9004279024"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 214,
+        "printType": "BOOK",
+        "categories": [
+          "Religion"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.1.0.0.preview.1",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=tlUMBAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=tlUMBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.co.in/books?id=tlUMBAAAQBAJ&pg=PA35&dq=search+Good&hl=&cd=10&source=gbs_api",
+        "infoLink": "http://books.google.co.in/books?id=tlUMBAAAQBAJ&dq=search+Good&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Elliot_N_Dorff.html?hl=&id=tlUMBAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=tlUMBAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "In \u003cb\u003eSearch\u003c/b\u003e of the \u003cb\u003eGood\u003c/b\u003e Life Hava Tirosh-Samuelson, Aaron W. Hughes. In \u003cb\u003eSearch\u003c/b\u003e \u003cbr\u003e\nof God* elliot n. dorff a. Coming to Terms with God for a long time, the Jewish \u003cbr\u003e\nbelief in God, as I understood it, was an embarrassment to me. as camp ramah \u003cbr\u003e\nwas having its effect on me, I came to know Judaism as a religion that probed the \u003cbr\u003e\nvery meaning of life in an open and challenging way and that, in the meantime, \u003cbr\u003e\nprovided a sensible, sensitive, supportive, and beautiful pattern for living. My \u003cbr\u003e\nincreasing&nbsp;..."
+      }
+    }
+  ]
+}

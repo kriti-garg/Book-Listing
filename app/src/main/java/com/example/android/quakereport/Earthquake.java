@@ -20,52 +20,37 @@ package com.example.android.quakereport;
  */
 public class Earthquake {
 
-    /** Magnitude of the earthquake */
-    private double mMagnitude;
-
-    /** Location of the earthquake */
-    private String mLocation;
-
-    /** Time of the earthquake */
-    private long mTimeInMilliseconds;
-
-    /** Website URL of the earthquake */
-    private String mUrl;
+    private String mAuthor;
+    private String mTitle;
+    private Integer mBookNumber;
 
     /**
      * Constructs a new {@link Earthquake} object.
      *
-     * @param magnitude is the magnitude (size) of the earthquake
-     * @param location is the location where the earthquake happened
-     * @param timeInMilliseconds is the time in milliseconds (from the Epoch) when the
-     *                           earthquake happened
-     * @param url is the website URL to find more details about the earthquake
+     * @param title is the magnitude (size) of the earthquake
+     * @param author is the location where the earthquake happened
      */
-    public Earthquake(double magnitude, String location, long timeInMilliseconds, String url) {
-        mMagnitude = magnitude;
-        mLocation = location;
-        mTimeInMilliseconds = timeInMilliseconds;
-        mUrl = url;
+    public Earthquake(String title, String author, Integer booknumber) {
+        mTitle = title;
+        mAuthor = author;
+        mBookNumber = booknumber;
     }
 
     /**
      * Returns the magnitude of the earthquake.
      */
-    public double getMagnitude() {
-        return mMagnitude;
+    public String getTitle() {
+        return mTitle;
+    }
+    public Integer getBookNumber() {
+        return mBookNumber;
     }
 
     /**
      * Returns the location of the earthquake.
      */
-    public String getLocation() {
-        return mLocation;
+    public String getAuthor() {
+        return mAuthor;
     }
 
-    /**
-     * Returns the website URL to find more information about the earthquake.
-     */
-    public String getUrl() {
-        return mUrl;
-    }
 }
