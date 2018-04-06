@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.quakereport;
+package com.example.android.booklisting;
 
 
 import android.content.Intent;
@@ -37,10 +37,10 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EarthquakeActivity extends AppCompatActivity implements LoaderCallbacks<List<Earthquake>>
+public class BookListingActivity extends AppCompatActivity implements LoaderCallbacks<List<BookListing>>
 {
 
-    public static final String LOG_TAG = EarthquakeActivity.class.getName();
+    public static final String LOG_TAG = BookListingActivity.class.getName();
 
     /** URL for earthquake data from the USGS dataset */
     private static final String USGS_REQUEST_URL = "https://www.googleapis.com/books/v1/volumes?q=search+";
@@ -52,7 +52,7 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
     private static final int EARTHQUAKE_LOADER_ID = 1;
 
     /** Adapter for the list of earthquakes */
-    private EarthquakeAdapter mAdapter;
+    private BookListingAdapter mAdapter;
 
 
     /** TextView that is displayed when the list is empty */
@@ -65,7 +65,7 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.earthquake_activity);
+        setContentView(R.layout.booklisting_activity);
         userInput = (EditText) findViewById(R.id.inputText);
 
         // Find a reference to the {@link ListView} in the layout
@@ -81,7 +81,7 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
         query = (Button) findViewById(R.id.search);
 
         // Create a new adapter that takes an empty list of earthquakes as input
-        mAdapter = new EarthquakeAdapter(this, new ArrayList<Earthquake>());
+        mAdapter = new BookListingAdapter(this, new ArrayList<BookListing>());
 
         // Set the adapter on the {@link ListView}
         // so the list can be populated in the user interface
@@ -93,7 +93,7 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 // Find the current earthquake that was clicked on
-                Earthquake currentEarthquake = mAdapter.getItem(position);
+                BookListing currentEarthquake = mAdapter.getItem(position);
 
                 Toast.makeText(getApplicationContext(), currentEarthquake.getTitle(),
                         Toast.LENGTH_SHORT).show();
@@ -104,7 +104,7 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long l) {
                 // Find the current earthquake that was clicked on
-                Earthquake currentEarthquake = mAdapter.getItem(position);
+                BookListing currentEarthquake = mAdapter.getItem(position);
                 // Convert the String URL into a URI object (to pass into the Intent constructor)
                 Uri earthquakeUri = Uri.parse(currentEarthquake.getUrl());
 
@@ -143,7 +143,7 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
                     // Initialize the loader. Pass in the int ID constant defined above and pass in null for
                     // the bundle. Pass in this activity for the LoaderCallbacks parameter (which is valid
                     // because this activity implements the LoaderCallbacks interface).
-                    loaderManager.initLoader(cnt, null, EarthquakeActivity.this);
+                    loaderManager.initLoader(cnt, null, BookListingActivity.this);
                 }
                 else {
                     // Otherwise, display error
@@ -164,13 +164,13 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
 
 
     @Override
-    public Loader<List<Earthquake>> onCreateLoader(int i, Bundle bundle) {
+    public Loader<List<BookListing>> onCreateLoader(int i, Bundle bundle) {
         // Create a new loader for the given URL
-        return new EarthquakeLoader(this, getUrl());
+        return new BookListingLoader(this, getUrl());
     }
 
     @Override
-    public void onLoadFinished(Loader<List<Earthquake>> loader, List<Earthquake> earthquakes) {
+    public void onLoadFinished(Loader<List<BookListing>> loader, List<BookListing> earthquakes) {
         // Hide loading indicator because the data has been loaded
         View loadingIndicator = findViewById(R.id.loading_indicator);
         loadingIndicator.setVisibility(View.GONE);
@@ -178,7 +178,7 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
         // Clear the adapter of previous earthquake data
         mAdapter.clear();
 
-        // If there is a valid list of {@link Earthquake}s, then add them to the adapter's
+        // If there is a valid list of {@link BookListing}s, then add them to the adapter's
         // data set. This will trigger the ListView to update.
         if (earthquakes != null && !earthquakes.isEmpty()) {
             mEmptyStateTextView.setVisibility(View.GONE);
@@ -193,7 +193,7 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
     }
 
     @Override
-    public void onLoaderReset(Loader<List<Earthquake>> loader) {
+    public void onLoaderReset(Loader<List<BookListing>> loader) {
         // Loader reset, so we can clear out our existing data.
         mAdapter.clear();
     }

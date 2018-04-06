@@ -13,12 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.quakereport;
+package com.example.android.booklisting;
 
-import android.content.Context;
 import android.text.TextUtils;
 import android.util.Log;
-import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -35,7 +33,7 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.android.quakereport.EarthquakeActivity.LOG_TAG;
+import static com.example.android.booklisting.BookListingActivity.LOG_TAG;
 
 /**
  * Helper methods related to requesting and receiving earthquake data from USGS.
@@ -55,9 +53,9 @@ public final class QueryUtils {
     }
 
     /**
-     * Query the USGS dataset and return a list of {@link Earthquake} objects.
+     * Query the USGS dataset and return a list of {@link BookListing} objects.
      */
-    public static List<Earthquake> fetchEarthquakeData(String requestUrl){
+    public static List<BookListing> fetchEarthquakeData(String requestUrl){
         // Create URL object
         URL url = createUrl(requestUrl);
 
@@ -70,10 +68,10 @@ public final class QueryUtils {
             Log.e(LOG_TAG, "Problem making the HTTP request.", e);
         }
 
-        // Extract relevant fields from the JSON response and create a list of {@link Earthquake}s
-        List<Earthquake> earthquakes = extractFeatureFromJson(jsonResponse);
+        // Extract relevant fields from the JSON response and create a list of {@link BookListing}s
+        List<BookListing> earthquakes = extractFeatureFromJson(jsonResponse);
 
-        // Return the list of {@link Earthquake}s
+        // Return the list of {@link BookListing}s
         return earthquakes;
     }
 
@@ -153,17 +151,17 @@ public final class QueryUtils {
     }
 
     /**
-     * Return a list of {@link Earthquake} objects that has been built up from
+     * Return a list of {@link BookListing} objects that has been built up from
      * parsing the given JSON response.
      */
-    private static List<Earthquake> extractFeatureFromJson(String earthquakeJSON) {
+    private static List<BookListing> extractFeatureFromJson(String earthquakeJSON) {
         // If the JSON string is empty or null, then return early.
         if (TextUtils.isEmpty(earthquakeJSON)) {
             return null;
         }
 
         // Create an empty ArrayList that we can start adding earthquakes to
-        List<Earthquake> earthquakes = new ArrayList<>();
+        List<BookListing> earthquakes = new ArrayList<>();
 
         // Try to parse the JSON response string. If there's a problem with the way the JSON
         // is formatted, a JSONException exception object will be thrown.
@@ -177,7 +175,7 @@ public final class QueryUtils {
             JSONArray earthquakeArray = baseJsonResponse.getJSONArray("items");
 
 
-            // For each earthquake in the earthquakeArray, create an {@link Earthquake} object
+            // For each earthquake in the earthquakeArray, create an {@link BookListing} object
             for (int i = 0; i < earthquakeArray.length(); i++) {
 
                 // Get a single earthquake at position i within the list of earthquakes
@@ -202,11 +200,11 @@ public final class QueryUtils {
                 //String imgurl = imglink[]
 
 
-                // Create a new {@link Earthquake} object with the magnitude, location, time,
+                // Create a new {@link BookListing} object with the magnitude, location, time,
                 // and url from the JSON response.
-                Earthquake earthquake = new Earthquake(title,authors, i+1, imgurl);
+                BookListing earthquake = new BookListing(title,authors, i+1, imgurl);
 
-                // Add the new {@link Earthquake} to the list of earthquakes.
+                // Add the new {@link BookListing} to the list of earthquakes.
                 earthquakes.add(earthquake);
             }
 

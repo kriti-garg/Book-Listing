@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.quakereport;
+package com.example.android.booklisting;
 
 /**
- * An {@link Earthquake} object contains information related to a single earthquake.
+ * An {@link BookListing} object contains information related to a single earthquake.
  */
-public class Earthquake {
+public class BookListing {
 
     private String mAuthor;
     private String mTitle;
@@ -28,12 +28,12 @@ public class Earthquake {
 
 
     /**
-     * Constructs a new {@link Earthquake} object.
+     * Constructs a new {@link BookListing} object.
      *
      * @param title is the magnitude (size) of the earthquake
      * @param author is the location where the earthquake happened
      */
-    public Earthquake(String title, String author, Integer booknumber, String url) {
+    public BookListing(String title, String author, Integer booknumber, String url) {
         mTitle = title;
         mAuthor = author;
         mBookNumber = booknumber;

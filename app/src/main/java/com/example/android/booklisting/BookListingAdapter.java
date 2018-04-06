@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.quakereport;
+package com.example.android.booklisting;
 
 import android.content.Context;
 import android.graphics.drawable.GradientDrawable;
@@ -24,27 +24,24 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import java.text.DecimalFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 /**
- * An {@link EarthquakeAdapter} knows how to create a list item layout for each earthquake
- * in the data source (a list of {@link Earthquake} objects).
+ * An {@link BookListingAdapter} knows how to create a list item layout for each earthquake
+ * in the data source (a list of {@link BookListing} objects).
  *
  * These list item layouts will be provided to an adapter view like ListView
  * to be displayed to the user.
  */
-public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
+public class BookListingAdapter extends ArrayAdapter<BookListing> {
 
     /**
-     * Constructs a new {@link EarthquakeAdapter}.
+     * Constructs a new {@link BookListingAdapter}.
      *
      * @param context of the app
      * @param earthquakes is the list of earthquakes, which is the data source of the adapter
      */
-    public EarthquakeAdapter(Context context, List<Earthquake> earthquakes) {
+    public BookListingAdapter(Context context, List<BookListing> earthquakes) {
         super(context, 0, earthquakes);
     }
 
@@ -59,11 +56,11 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         View listItemView = convertView;
         if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.earthquake_list_item, parent, false);
+                    R.layout.booklisting_list_item, parent, false);
         }
 
         // Find the earthquake at the given position in the list of earthquakes
-        Earthquake currentEarthquake = getItem(position);
+        BookListing currentEarthquake = getItem(position);
 
         // Find the TextView with view ID magnitude
         TextView magnitudeView = (TextView) listItemView.findViewById(R.id.magnitude);
