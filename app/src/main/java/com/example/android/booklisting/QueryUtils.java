@@ -186,11 +186,22 @@ public final class QueryUtils {
                 // key called "properties", which represents a list of all properties
                 // for that book.
                 JSONObject properties = currentBook.getJSONObject("volumeInfo");
-                JSONArray authorsArray = properties.getJSONArray("authors");
-                String authors = AuthorsList(authorsArray);
+                String authors ;
+                try {
+                    JSONArray authorsArray = properties.getJSONArray("authors");
+                    authors = AuthorsList(authorsArray);
+                }catch (JSONException e){
+                    authors = "Author Unknown";
+                }
+
                 String title = properties.getString("title");
-                JSONObject imglink = properties.getJSONObject("imageLinks");
-                String imgurl = imglink.getString("thumbnail");
+                String imgurl;
+                try {
+                    JSONObject imglink = properties.getJSONObject("imageLinks");
+                    imgurl = imglink.getString("thumbnail");
+                }catch (JSONException e){
+                    imgurl = "Url not found";
+                };
 
                 // Create a new {@link BookListing} object with the title, authors, booknumber,
                 // and url from the JSON response.

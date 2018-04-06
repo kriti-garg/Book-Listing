@@ -72,7 +72,7 @@ public class BookListingAdapter extends ArrayAdapter<BookListing> {
         // Fetch the background from the TextView, which is a GradientDrawable.
         GradientDrawable magnitudeCircle = (GradientDrawable) booknumberView.getBackground();
         // Get the appropriate background color based on the current book magnitude
-        int magnitudeColor = getMagnitudeColor(currentBook.getBookNumber());
+        int magnitudeColor = getColor(currentBook.getBookNumber());
         // Set the color on the magnitude circle
         magnitudeCircle.setColor(magnitudeColor);
 
@@ -98,39 +98,39 @@ public class BookListingAdapter extends ArrayAdapter<BookListing> {
      *
      * @param booknumber of the book
      */
-    private int getMagnitudeColor(Integer booknumber) {
+    private int getColor(Integer booknumber) {
         int booknumberColorResourceId;
         switch (booknumber) {
             case 0:
             case 1:
-                booknumberColorResourceId = R.color.magnitude1;
+                booknumberColorResourceId = R.color.color1;
                 break;
             case 2:
-                booknumberColorResourceId = R.color.magnitude2;
+                booknumberColorResourceId = R.color.color2;
                 break;
             case 3:
-                booknumberColorResourceId = R.color.magnitude3;
+                booknumberColorResourceId = R.color.color3;
                 break;
             case 4:
-                booknumberColorResourceId = R.color.magnitude4;
+                booknumberColorResourceId = R.color.color4;
                 break;
             case 5:
-                booknumberColorResourceId = R.color.magnitude5;
+                booknumberColorResourceId = R.color.color5;
                 break;
             case 6:
-                booknumberColorResourceId = R.color.magnitude6;
+                booknumberColorResourceId = R.color.color6;
                 break;
             case 7:
-                booknumberColorResourceId = R.color.magnitude7;
+                booknumberColorResourceId = R.color.color7;
                 break;
             case 8:
-                booknumberColorResourceId = R.color.magnitude8;
+                booknumberColorResourceId = R.color.color8;
                 break;
             case 9:
-                booknumberColorResourceId = R.color.magnitude9;
+                booknumberColorResourceId = R.color.color9;
                 break;
             default:
-                booknumberColorResourceId = R.color.magnitude10plus;
+                booknumberColorResourceId = R.color.color10;
                 break;
         }
 

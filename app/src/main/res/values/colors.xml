@@ -30,32 +30,32 @@
     <color name="textColorTitle">#2B3D4D</color>
 
     <!-- Color for a book with book number 0 and 2 -->
-    <color name="magnitude1">#4A7BA7</color>
+    <color name="color1">#4A7BA7</color>
 
     <!-- Magnitude circle color for a book with book number between 2 and 3 -->
-    <color name="magnitude2">#df9c86</color>
+    <color name="color2">#df9c86</color>
 
     <!-- Magnitude circle color for a book with book number between 3 and 4 -->
-    <color name="magnitude3">#a9cfed</color>
+    <color name="color3">#a9cfed</color>
 
     <!-- Magnitude circle color for a book with book number between 4 and 5 -->
-    <color name="magnitude4">#F5A623</color>
+    <color name="color4">#F5A623</color>
 
     <!-- Magnitude circle color for a book with book number between 5 and 6 -->
-    <color name="magnitude5">#FF7D50</color>
+    <color name="color5">#FF7D50</color>
 
     <!-- Magnitude circle color for a book with book number between 6 and 7 -->
-    <color name="magnitude6">#01a979</color>
+    <color name="color6">#01a979</color>
 
     <!-- Magnitude circle color for a book with book number between 7 and 8 -->
-    <color name="magnitude7">#0c24c4</color>
+    <color name="color7">#0c24c4</color>
 
     <!-- Magnitude circle color for a book with book number between 8 and 9 -->
-    <color name="magnitude8">#edf506</color>
+    <color name="color8">#edf506</color>
 
     <!-- Magnitude circle color for a book with book number between 9 and 10 -->
-    <color name="magnitude9">#801504</color>
+    <color name="color9">#801504</color>
 
     <!-- Magnitude circle color for a book with book number over 10 -->
-    <color name="magnitude10plus">#C03823</color>
+    <color name="color10">#C03823</color>
 </resources>
