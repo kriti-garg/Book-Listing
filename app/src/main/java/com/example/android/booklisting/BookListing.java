@@ -31,8 +31,10 @@ public class BookListing {
     /**
      * Constructs a new {@link BookListing} object.
      *
-     * @param title is the magnitude (size) of the earthquake
-     * @param author is the location where the earthquake happened
+     * @param title is the title of the book
+     * @param author is the author of the book
+     * @param booknumber is the Book Number of the book
+     * @param url is the website URL to find the thumbnail of the book.
      */
     public BookListing(String title, String author, Integer booknumber, String url) {
         mTitle = title;
@@ -42,24 +44,28 @@ public class BookListing {
     }
 
     /**
-     * Returns the magnitude of the earthquake.
+     * Returns the title of the book.
      */
     public String getTitle() {
         return mTitle;
     }
+
+    /**
+     * Returns the Book Number of the book.
+     */
     public Integer getBookNumber() {
         return mBookNumber;
     }
 
     /**
-     * Returns the location of the earthquake.
+     * Returns the author's name of the book.
      */
     public String getAuthor() {
         return mAuthor;
     }
 
     /**
-     * Returns the website URL to find more information about the earthquake.
+     * Returns the website URL to find the thumbnail of the book.
      */
     public String getUrl() {
         return mUrl;

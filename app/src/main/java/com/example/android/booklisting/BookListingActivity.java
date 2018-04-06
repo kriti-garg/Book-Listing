@@ -62,6 +62,11 @@ public class BookListingActivity extends AppCompatActivity implements LoaderCall
     private TextView mEmptyStateTextView;
 
     /**
+     * TextView that is displayed when the list is empty
+     */
+    private TextView instructionsTextView;
+
+    /**
      * EditView for user to provide input
      */
     private EditText userInput;
@@ -81,6 +86,7 @@ public class BookListingActivity extends AppCompatActivity implements LoaderCall
         ListView bookListView = (ListView) findViewById(R.id.list);
 
         mEmptyStateTextView = (TextView) findViewById(R.id.empty_view);
+        instructionsTextView = (TextView) findViewById(R.id.instruction);
         bookListView.setEmptyView(mEmptyStateTextView);
         mEmptyStateTextView.setVisibility(View.GONE);
 
@@ -136,6 +142,7 @@ public class BookListingActivity extends AppCompatActivity implements LoaderCall
                 View loadingIndicator = findViewById(R.id.loading_indicator);
                 loadingIndicator.setVisibility(View.VISIBLE);
                 mEmptyStateTextView.setVisibility(View.GONE);
+                instructionsTextView.setVisibility(View.GONE);
 
                 BOOK_LOADER_ID++;
 

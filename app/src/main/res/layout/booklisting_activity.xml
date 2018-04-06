@@ -36,13 +36,13 @@
         android:hint="Search"/>
 
     <TextView
-        android:id="@+id/choice"
+        android:id="@+id/instruction"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/inputText"
         android:layout_marginTop="10dp"
         android:text="@string/searchmsg"
-        android:textSize="15sp" />
+        android:textSize="25sp" />
 
 
     <ListView
@@ -51,7 +51,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/choice"
+        android:layout_below="@+id/instruction"
         android:divider="@null"
         android:dividerHeight="0dp"/>
 

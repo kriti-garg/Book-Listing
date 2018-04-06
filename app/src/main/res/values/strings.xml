@@ -15,7 +15,7 @@
 -->
 <resources>
     <!-- Title for the application. [CHAR LIMIT=12] -->
-    <string name="app_name">Book Listing</string>
+    <string name="app_name">Book Listing App</string>
 
     <!-- Text to display in the list when there are no books[CHAR LIMIT=NONE] -->
     <string name="no_books">No books found.</string>
@@ -23,5 +23,5 @@
     <!-- Error message when there is no internet connectivity [CHAR LIMIT=NONE] -->
     <string name="no_internet_connection">No internet connection.</string>
 
-    <string name="searchmsg">Write the type of book you want to search</string>
+    <string name="searchmsg">Write the type of book you want to search and click on Search button. Click on the book to get the Book Name and long press the book to view thumbnail of the book</string>
 </resources>
