@@ -36,29 +36,29 @@ import java.util.List;
 import static com.example.android.booklisting.BookListingActivity.LOG_TAG;
 
 /**
- * Helper methods related to requesting and receiving earthquake data from USGS.
+ * Helper methods related to requesting and receiving book data from Google API.
  */
 public final class QueryUtils {
 
-//
-
     private static final String SAMPLE_JSON_RESPONSE =
             "{\"items\": [{\"volumeInfo\": {\"title\": \"Android\",\"authors\": [\"Henry Kuttner\", \"Catherine Lucile Moore\"]}}]}";
+
     /**
      * Create a private constructor because no one should ever create a {@link QueryUtils} object.
      * This class is only meant to hold static variables and methods, which can be accessed
      * directly from the class name QueryUtils (and an object instance of QueryUtils is not needed).
      */
+
     private QueryUtils() {
     }
 
     /**
-     * Query the USGS dataset and return a list of {@link BookListing} objects.
+     * Query the dataset and return a list of {@link BookListing} objects.
      */
-    public static List<BookListing> fetchEarthquakeData(String requestUrl){
+    public static List<BookListing> fetchBookData(String requestUrl){
+
         // Create URL object
         URL url = createUrl(requestUrl);
-
 
         // Perform HTTP request to the URL and receive a JSON response back
         String jsonResponse = null;
@@ -69,10 +69,10 @@ public final class QueryUtils {
         }
 
         // Extract relevant fields from the JSON response and create a list of {@link BookListing}s
-        List<BookListing> earthquakes = extractFeatureFromJson(jsonResponse);
+        List<BookListing> books = extractFeatureFromJson(jsonResponse);
 
         // Return the list of {@link BookListing}s
-        return earthquakes;
+        return books;
     }
 
     /**
@@ -117,7 +117,7 @@ public final class QueryUtils {
                 Log.e(LOG_TAG, "Error response code: " + urlConnection.getResponseCode());
             }
         } catch (IOException e) {
-            Log.e(LOG_TAG, "Problem retrieving the earthquake JSON results.", e);
+            Log.e(LOG_TAG, "Problem retrieving the book JSON results.", e);
         } finally {
             if (urlConnection != null) {
                 urlConnection.disconnect();
@@ -154,84 +154,76 @@ public final class QueryUtils {
      * Return a list of {@link BookListing} objects that has been built up from
      * parsing the given JSON response.
      */
-    private static List<BookListing> extractFeatureFromJson(String earthquakeJSON) {
+    private static List<BookListing> extractFeatureFromJson(String bookJSON) {
         // If the JSON string is empty or null, then return early.
-        if (TextUtils.isEmpty(earthquakeJSON)) {
+        if (TextUtils.isEmpty(bookJSON)) {
             return null;
         }
 
-        // Create an empty ArrayList that we can start adding earthquakes to
-        List<BookListing> earthquakes = new ArrayList<>();
+        // Create an empty ArrayList that we can start adding books to
+        List<BookListing> books = new ArrayList<>();
 
         // Try to parse the JSON response string. If there's a problem with the way the JSON
         // is formatted, a JSONException exception object will be thrown.
         // Catch the exception so the app doesn't crash, and print the error message to the logs.
         try {
-            // Create a JSONObject from the SAMPLE_JSON_RESPONSE string
-            JSONObject baseJsonResponse = new JSONObject(earthquakeJSON);
 
-            // Extract the JSONArray associated with the key called "features",
-            // which represents a list of features (or earthquakes).
-            JSONArray earthquakeArray = baseJsonResponse.getJSONArray("items");
+            // Create a JSONObject from the bookJSON string
+            JSONObject baseJsonResponse = new JSONObject(bookJSON);
+
+            // Extract the JSONArray associated with the key called "items",
+            // which represents a list of books.
+            JSONArray bookArray = baseJsonResponse.getJSONArray("items");
 
 
-            // For each earthquake in the earthquakeArray, create an {@link BookListing} object
-            for (int i = 0; i < earthquakeArray.length(); i++) {
+            // For each book in the bookArray, create an {@link BookListing} object
+            for (int i = 0; i < bookArray.length(); i++) {
 
-                // Get a single earthquake at position i within the list of earthquakes
-                JSONObject currentEarthquake = earthquakeArray.getJSONObject(i);
+                // Get a single book at position i within the list of books
+                JSONObject currentBook = bookArray.getJSONObject(i);
 
-                // For a given earthquake, extract the JSONObject associated with the
+                // For a given book, extract the JSONObject associated with the
                 // key called "properties", which represents a list of all properties
-                // for that earthquake.
-                JSONObject properties = currentEarthquake.getJSONObject("volumeInfo");
-
+                // for that book.
+                JSONObject properties = currentBook.getJSONObject("volumeInfo");
                 JSONArray authorsArray = properties.getJSONArray("authors");
                 String authors = AuthorsList(authorsArray);
                 String title = properties.getString("title");
                 JSONObject imglink = properties.getJSONObject("imageLinks");
                 String imgurl = imglink.getString("thumbnail");
 
-                Log.d("img",imglink.toString());
-                Log.d("img",imgurl.toString());
-
-                //Toast.makeText(this.getClass(), "This is my Toast message!",
-                  //      Toast.LENGTH_SHORT).show();
-                //String imgurl = imglink[]
-
-
-                // Create a new {@link BookListing} object with the magnitude, location, time,
+                // Create a new {@link BookListing} object with the title, authors, booknumber,
                 // and url from the JSON response.
-                BookListing earthquake = new BookListing(title,authors, i+1, imgurl);
+                BookListing book = new BookListing(title,authors, i+1, imgurl);
 
-                // Add the new {@link BookListing} to the list of earthquakes.
-                earthquakes.add(earthquake);
+                // Add the new {@link BookListing} to the list of books.
+                books.add(book);
             }
 
         } catch (JSONException e) {
             // If an error is thrown when executing any of the above statements in the "try" block,
             // catch the exception here, so the app doesn't crash. Print a log message
             // with the message from the exception.
-            Log.e("QueryUtils", "Problem parsing the earthquake JSON results", e);
+            Log.e("QueryUtils", "Problem parsing the book JSON results", e);
         }
 
-        // Return the list of earthquakes
-        return earthquakes;
+        // Return the list of books
+        return books;
     }
 
-    public static String AuthorsList(JSONArray authorsList) throws JSONException {
+    private static String AuthorsList(JSONArray authorsList) throws JSONException {
 
-        String ListInString = null;
+        StringBuilder ListInString = null;
 
         for (int i = 0; i < authorsList.length(); i++) {
             if (i == 0) {
-                ListInString = authorsList.getString(0);
+                ListInString = new StringBuilder(authorsList.getString(0));
             } else {
-                ListInString = ListInString + ", " + authorsList.getString(i);
+                ListInString.append(", ").append(authorsList.getString(i));
             }
         }
 
-        return ListInString;
+        return ListInString.toString();
     }
 
 }

@@ -41,7 +41,7 @@
         android:layout_height="20dp"
         android:layout_below="@+id/inputText"
         android:layout_marginTop="10dp"
-        android:text="Write the type of book you want to search"
+        android:text="@string/searchmsg"
         android:textSize="15sp" />
 
 

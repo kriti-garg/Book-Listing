@@ -15,7 +15,6 @@
  */
 package com.example.android.booklisting;
 
-
 import android.content.Intent;
 import android.app.LoaderManager;
 import android.app.LoaderManager.LoaderCallbacks;
@@ -37,29 +36,39 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BookListingActivity extends AppCompatActivity implements LoaderCallbacks<List<BookListing>>
-{
+public class BookListingActivity extends AppCompatActivity implements LoaderCallbacks<List<BookListing>> {
 
     public static final String LOG_TAG = BookListingActivity.class.getName();
 
-    /** URL for earthquake data from the USGS dataset */
-    private static final String USGS_REQUEST_URL = "https://www.googleapis.com/books/v1/volumes?q=search+";
+    /**
+     * URL for book data from the Google API
+     */
+    private static final String BOOK_REQUEST_URL = "https://www.googleapis.com/books/v1/volumes?q=search+";
 
     /**
-     * Constant value for the earthquake loader ID. We can choose any integer.
-     * This really only comes into play if you're using multiple loaders.
+     * Variable value for the book loader ID as we want to load page again and
+     * agian a new book is searched
      */
-    private static final int EARTHQUAKE_LOADER_ID = 1;
+    private int BOOK_LOADER_ID = 0;
 
-    /** Adapter for the list of earthquakes */
+    /**
+     * Adapter for the list of books
+     */
     private BookListingAdapter mAdapter;
 
-
-    /** TextView that is displayed when the list is empty */
+    /**
+     * TextView that is displayed when the list is empty
+     */
     private TextView mEmptyStateTextView;
 
+    /**
+     * EditView for user to provide input
+     */
     private EditText userInput;
-    private Integer cnt=0;
+
+    /**
+     * Query button to be pressed to search the book
+     */
     private Button query;
 
     @Override
@@ -69,47 +78,49 @@ public class BookListingActivity extends AppCompatActivity implements LoaderCall
         userInput = (EditText) findViewById(R.id.inputText);
 
         // Find a reference to the {@link ListView} in the layout
-
-        ListView earthquakeListView = (ListView) findViewById(R.id.list);
-        //query = (Button) findViewById(R.id.search);
-
+        ListView bookListView = (ListView) findViewById(R.id.list);
 
         mEmptyStateTextView = (TextView) findViewById(R.id.empty_view);
-        earthquakeListView.setEmptyView(mEmptyStateTextView);
+        bookListView.setEmptyView(mEmptyStateTextView);
         mEmptyStateTextView.setVisibility(View.GONE);
 
         query = (Button) findViewById(R.id.search);
 
-        // Create a new adapter that takes an empty list of earthquakes as input
+        // Create a new adapter that takes an empty list of books as input
         mAdapter = new BookListingAdapter(this, new ArrayList<BookListing>());
 
         // Set the adapter on the {@link ListView}
         // so the list can be populated in the user interface
-        earthquakeListView.setAdapter(mAdapter);
+        bookListView.setAdapter(mAdapter);
 
-        // Set an item click listener on the ListView, which sends an intent to a web browser
-        // to open a website with more information about the selected earthquake.
-        earthquakeListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        // Set an item click listener on the ListView, which produces toast specifying the
+        // Title of the selected book.
+        bookListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                // Find the current earthquake that was clicked on
-                BookListing currentEarthquake = mAdapter.getItem(position);
+                // Find the current book that was clicked on
+                BookListing currentBook = mAdapter.getItem(position);
 
-                Toast.makeText(getApplicationContext(), currentEarthquake.getTitle(),
+                //Make a toast with the title of the book
+                Toast.makeText(getApplicationContext(), currentBook.getTitle(),
                         Toast.LENGTH_SHORT).show();
             }
         });
 
-        earthquakeListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+        // Set an item Long click listener on the ListView, which sends an intent to a web browser
+        // to open a the thumbnail of the selected book.
+        bookListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long l) {
-                // Find the current earthquake that was clicked on
-                BookListing currentEarthquake = mAdapter.getItem(position);
-                // Convert the String URL into a URI object (to pass into the Intent constructor)
-                Uri earthquakeUri = Uri.parse(currentEarthquake.getUrl());
 
-                // Create a new intent to view the earthquake URI
-                Intent websiteIntent = new Intent(Intent.ACTION_VIEW, earthquakeUri);
+                // Find the current book that was clicked on
+                BookListing currentBook = mAdapter.getItem(position);
+
+                // Convert the String URL into a URI object (to pass into the Intent constructor)
+                Uri bookUri = Uri.parse(currentBook.getUrl());
+
+                // Create a new intent to view the book URI
+                Intent websiteIntent = new Intent(Intent.ACTION_VIEW, bookUri);
 
                 // Send the intent to launch a new activity
                 startActivity(websiteIntent);
@@ -121,11 +132,13 @@ public class BookListingActivity extends AppCompatActivity implements LoaderCall
         query.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 View loadingIndicator = findViewById(R.id.loading_indicator);
                 loadingIndicator.setVisibility(View.VISIBLE);
                 mEmptyStateTextView.setVisibility(View.GONE);
-                //loadingIndicator.setVisibility(View.VISIBLE);
-                cnt++;
+
+                BOOK_LOADER_ID++;
+
                 // Get a reference to the ConnectivityManager to check state of network connectivity
                 ConnectivityManager connMgr = (ConnectivityManager)
                         getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -133,6 +146,7 @@ public class BookListingActivity extends AppCompatActivity implements LoaderCall
                 // Get details on the currently active default data network
                 NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
 
+                // Clear the mAdapter
                 mAdapter.clear();
 
                 // If there is a network connection, fetch data
@@ -143,24 +157,22 @@ public class BookListingActivity extends AppCompatActivity implements LoaderCall
                     // Initialize the loader. Pass in the int ID constant defined above and pass in null for
                     // the bundle. Pass in this activity for the LoaderCallbacks parameter (which is valid
                     // because this activity implements the LoaderCallbacks interface).
-                    loaderManager.initLoader(cnt, null, BookListingActivity.this);
-                }
-                else {
+                    loaderManager.initLoader(BOOK_LOADER_ID, null, BookListingActivity.this);
+                } else {
                     // Otherwise, display error
-                    // First, hide loading indicator so error message will be visible
-                    //loadingIndicator = findViewById(R.id.loading_indicator);
+                    // Hide loading indicator so error message will be visible
                     loadingIndicator.setVisibility(View.GONE);
 
+                    // Clear the mAdapter
                     mAdapter.clear();
+
                     // Update empty state with no connection error message
                     mEmptyStateTextView.setText(R.string.no_internet_connection);
                     mEmptyStateTextView.setVisibility(View.VISIBLE);
                 }
-
-                // TODO Auto-generated method stub
             }
         });
-    };
+    }
 
 
     @Override
@@ -170,24 +182,22 @@ public class BookListingActivity extends AppCompatActivity implements LoaderCall
     }
 
     @Override
-    public void onLoadFinished(Loader<List<BookListing>> loader, List<BookListing> earthquakes) {
+    public void onLoadFinished(Loader<List<BookListing>> loader, List<BookListing> books) {
         // Hide loading indicator because the data has been loaded
         View loadingIndicator = findViewById(R.id.loading_indicator);
         loadingIndicator.setVisibility(View.GONE);
 
-        // Clear the adapter of previous earthquake data
+        // Clear the adapter of previous book data
         mAdapter.clear();
 
         // If there is a valid list of {@link BookListing}s, then add them to the adapter's
         // data set. This will trigger the ListView to update.
-        if (earthquakes != null && !earthquakes.isEmpty()) {
+        if (books != null && !books.isEmpty()) {
             mEmptyStateTextView.setVisibility(View.GONE);
-            mAdapter.addAll(earthquakes);
-            //updateUi(earthquakes);
-        }
-        else{
-            // Set empty state text to display "No earthquakes found."
-            mEmptyStateTextView.setText(R.string.no_earthquakes);
+            mAdapter.addAll(books);
+        } else {
+            // Set empty state text to display "No books found."
+            mEmptyStateTextView.setText(R.string.no_books);
             mEmptyStateTextView.setVisibility(View.VISIBLE);
         }
     }
@@ -198,9 +208,9 @@ public class BookListingActivity extends AppCompatActivity implements LoaderCall
         mAdapter.clear();
     }
 
+    /** Format the url taking the input from the user */
     private String getUrl() {
         String UserInput = userInput.getText().toString().trim().replaceAll("\\s+", "+");
-        String finalurl = USGS_REQUEST_URL + UserInput;
-        return finalurl;
+        return BOOK_REQUEST_URL + UserInput;
     }
 }

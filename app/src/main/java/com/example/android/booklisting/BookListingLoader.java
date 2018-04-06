@@ -21,7 +21,7 @@ import android.content.Context;
 import java.util.List;
 
 /**
- * Loads a list of earthquakes by using an AsyncTask to perform the
+ * Loads a list of books by using an AsyncTask to perform the
  * network request to the given URL.
  */
 public class BookListingLoader extends AsyncTaskLoader<List<BookListing>> {
@@ -57,8 +57,8 @@ public class BookListingLoader extends AsyncTaskLoader<List<BookListing>> {
             return null;
         }
 
-        // Perform the network request, parse the response, and extract a list of earthquakes.
-        List<BookListing> earthquakes = QueryUtils.fetchEarthquakeData(mUrl);
-        return earthquakes;
+        // Perform the network request, parse the response, and extract a list of books.
+        List<BookListing> books = QueryUtils.fetchBookData(mUrl);
+        return books;
     }
 }

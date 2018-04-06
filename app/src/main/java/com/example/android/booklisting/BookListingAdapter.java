@@ -27,7 +27,7 @@ import android.widget.TextView;
 import java.util.List;
 
 /**
- * An {@link BookListingAdapter} knows how to create a list item layout for each earthquake
+ * An {@link BookListingAdapter} knows how to create a list item layout for each book
  * in the data source (a list of {@link BookListing} objects).
  *
  * These list item layouts will be provided to an adapter view like ListView
@@ -39,15 +39,15 @@ public class BookListingAdapter extends ArrayAdapter<BookListing> {
      * Constructs a new {@link BookListingAdapter}.
      *
      * @param context of the app
-     * @param earthquakes is the list of earthquakes, which is the data source of the adapter
+     * @param books is the list of books, which is the data source of the adapter
      */
-    public BookListingAdapter(Context context, List<BookListing> earthquakes) {
-        super(context, 0, earthquakes);
+    public BookListingAdapter(Context context, List<BookListing> books) {
+        super(context, 0, books);
     }
 
     /**
-     * Returns a list item view that displays information about the earthquake at the given position
-     * in the list of earthquakes.
+     * Returns a list item view that displays information about the book at the given position
+     * in the list of books.
      */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -59,81 +59,81 @@ public class BookListingAdapter extends ArrayAdapter<BookListing> {
                     R.layout.booklisting_list_item, parent, false);
         }
 
-        // Find the earthquake at the given position in the list of earthquakes
-        BookListing currentEarthquake = getItem(position);
+        // Find the book at the given position in the list of books
+        BookListing currentBook = getItem(position);
 
         // Find the TextView with view ID magnitude
-        TextView magnitudeView = (TextView) listItemView.findViewById(R.id.magnitude);
+        TextView booknumberView = (TextView) listItemView.findViewById(R.id.booknumber);
 
-        // Display the magnitude of the current earthquake in that TextView
-        magnitudeView.setText(currentEarthquake.getBookNumber().toString());
+        // Display the book number of the current book in that TextView
+        booknumberView.setText(currentBook.getBookNumber().toString());
 
         // Set the proper background color on the magnitude circle.
         // Fetch the background from the TextView, which is a GradientDrawable.
-        GradientDrawable magnitudeCircle = (GradientDrawable) magnitudeView.getBackground();
-        // Get the appropriate background color based on the current earthquake magnitude
-        int magnitudeColor = getMagnitudeColor(currentEarthquake.getBookNumber());
+        GradientDrawable magnitudeCircle = (GradientDrawable) booknumberView.getBackground();
+        // Get the appropriate background color based on the current book magnitude
+        int magnitudeColor = getMagnitudeColor(currentBook.getBookNumber());
         // Set the color on the magnitude circle
         magnitudeCircle.setColor(magnitudeColor);
 
 
         // Find the TextView with view ID location
-        TextView primaryLocationView = (TextView) listItemView.findViewById(R.id.primary_location);
+        TextView authorView = (TextView) listItemView.findViewById(R.id.author);
 
-        // Display the location of the current earthquake in that TextView
-        primaryLocationView.setText(currentEarthquake.getAuthor());
+        // Display the location of the current book in that TextView
+        authorView.setText(currentBook.getAuthor());
 
         // Find the TextView with view ID location offset
-        TextView locationOffsetView = (TextView) listItemView.findViewById(R.id.location_offset);
+        TextView titleView = (TextView) listItemView.findViewById(R.id.title);
 
-        // Display the location offset of the current earthquake in that TextView
-        locationOffsetView.setText(currentEarthquake.getTitle());
+        // Display the location offset of the current book in that TextView
+        titleView.setText(currentBook.getTitle());
 
         // Return the list item view that is now showing the appropriate data
         return listItemView;
     }
 
     /**
-     * Return the color for the magnitude circle based on the intensity of the earthquake.
+     * Return the color for the booknumber circle based on the intensity of the book.
      *
-     * @param magnitude of the earthquake
+     * @param booknumber of the book
      */
-    private int getMagnitudeColor(Integer magnitude) {
-        int magnitudeColorResourceId;
-        switch (magnitude) {
+    private int getMagnitudeColor(Integer booknumber) {
+        int booknumberColorResourceId;
+        switch (booknumber) {
             case 0:
             case 1:
-                magnitudeColorResourceId = R.color.magnitude1;
+                booknumberColorResourceId = R.color.magnitude1;
                 break;
             case 2:
-                magnitudeColorResourceId = R.color.magnitude2;
+                booknumberColorResourceId = R.color.magnitude2;
                 break;
             case 3:
-                magnitudeColorResourceId = R.color.magnitude3;
+                booknumberColorResourceId = R.color.magnitude3;
                 break;
             case 4:
-                magnitudeColorResourceId = R.color.magnitude4;
+                booknumberColorResourceId = R.color.magnitude4;
                 break;
             case 5:
-                magnitudeColorResourceId = R.color.magnitude5;
+                booknumberColorResourceId = R.color.magnitude5;
                 break;
             case 6:
-                magnitudeColorResourceId = R.color.magnitude6;
+                booknumberColorResourceId = R.color.magnitude6;
                 break;
             case 7:
-                magnitudeColorResourceId = R.color.magnitude7;
+                booknumberColorResourceId = R.color.magnitude7;
                 break;
             case 8:
-                magnitudeColorResourceId = R.color.magnitude8;
+                booknumberColorResourceId = R.color.magnitude8;
                 break;
             case 9:
-                magnitudeColorResourceId = R.color.magnitude9;
+                booknumberColorResourceId = R.color.magnitude9;
                 break;
             default:
-                magnitudeColorResourceId = R.color.magnitude10plus;
+                booknumberColorResourceId = R.color.magnitude10plus;
                 break;
         }
 
-        return ContextCompat.getColor(getContext(), magnitudeColorResourceId);
+        return ContextCompat.getColor(getContext(), booknumberColorResourceId);
     }
 }

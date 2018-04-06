@@ -16,14 +16,15 @@
 package com.example.android.booklisting;
 
 /**
- * An {@link BookListing} object contains information related to a single earthquake.
+ * An {@link BookListing} object contains information related to a single book.
  */
 public class BookListing {
 
     private String mAuthor;
     private String mTitle;
     private Integer mBookNumber;
-    /** Website URL of the earthquake */
+
+    /** Website URL of thumbnail of the book */
     private String mUrl;
 
 
