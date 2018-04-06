@@ -18,6 +18,7 @@ package com.example.android.quakereport;
 import android.content.Context;
 import android.text.TextUtils;
 import android.util.Log;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -190,11 +191,20 @@ public final class QueryUtils {
                 JSONArray authorsArray = properties.getJSONArray("authors");
                 String authors = AuthorsList(authorsArray);
                 String title = properties.getString("title");
+                JSONObject imglink = properties.getJSONObject("imageLinks");
+                String imgurl = imglink.getString("thumbnail");
+
+                Log.d("img",imglink.toString());
+                Log.d("img",imgurl.toString());
+
+                //Toast.makeText(this.getClass(), "This is my Toast message!",
+                  //      Toast.LENGTH_SHORT).show();
+                //String imgurl = imglink[]
 
 
                 // Create a new {@link Earthquake} object with the magnitude, location, time,
                 // and url from the JSON response.
-                Earthquake earthquake = new Earthquake(title,authors, i+1);
+                Earthquake earthquake = new Earthquake(title,authors, i+1, imgurl);
 
                 // Add the new {@link Earthquake} to the list of earthquakes.
                 earthquakes.add(earthquake);

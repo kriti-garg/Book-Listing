@@ -23,6 +23,9 @@ public class Earthquake {
     private String mAuthor;
     private String mTitle;
     private Integer mBookNumber;
+    /** Website URL of the earthquake */
+    private String mUrl;
+
 
     /**
      * Constructs a new {@link Earthquake} object.
@@ -30,10 +33,11 @@ public class Earthquake {
      * @param title is the magnitude (size) of the earthquake
      * @param author is the location where the earthquake happened
      */
-    public Earthquake(String title, String author, Integer booknumber) {
+    public Earthquake(String title, String author, Integer booknumber, String url) {
         mTitle = title;
         mAuthor = author;
         mBookNumber = booknumber;
+        mUrl = url;
     }
 
     /**
@@ -53,4 +57,10 @@ public class Earthquake {
         return mAuthor;
     }
 
+    /**
+     * Returns the website URL to find more information about the earthquake.
+     */
+    public String getUrl() {
+        return mUrl;
+    }
 }
