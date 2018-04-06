@@ -17,7 +17,8 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="15dp">
 
     <Button
         android:id="@+id/search"
@@ -25,14 +26,14 @@
         android:layout_height="50dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:text="search" />
+        android:text="Search" />
 
     <EditText
         android:id="@+id/inputText"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_toLeftOf="@+id/search"
-        android:hint="Search" />
+        android:hint="Search"/>
 
     <TextView
         android:id="@+id/choice"
@@ -68,6 +69,7 @@
         style="@style/Widget.AppCompat.ProgressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:layout_centerInParent="true"/>
 
 </RelativeLayout>

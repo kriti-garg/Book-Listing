@@ -20,7 +20,6 @@ import android.content.Intent;
 import android.app.LoaderManager;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.content.Context;
-import android.net.Uri;
 import android.content.Loader;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -55,11 +54,13 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
     /** Adapter for the list of earthquakes */
     private EarthquakeAdapter mAdapter;
 
+
     /** TextView that is displayed when the list is empty */
     private TextView mEmptyStateTextView;
 
-    private Button query;
     private EditText userInput;
+    private Integer cnt=0;
+    private Button query;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,11 +71,14 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
         // Find a reference to the {@link ListView} in the layout
 
         ListView earthquakeListView = (ListView) findViewById(R.id.list);
-        query = (Button) findViewById(R.id.search);
+        //query = (Button) findViewById(R.id.search);
 
 
         mEmptyStateTextView = (TextView) findViewById(R.id.empty_view);
         earthquakeListView.setEmptyView(mEmptyStateTextView);
+        mEmptyStateTextView.setVisibility(View.GONE);
+
+        query = (Button) findViewById(R.id.search);
 
         // Create a new adapter that takes an empty list of earthquakes as input
         mAdapter = new EarthquakeAdapter(this, new ArrayList<Earthquake>());
@@ -96,10 +100,14 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
         });
 
 
-
         query.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                View loadingIndicator = findViewById(R.id.loading_indicator);
+                loadingIndicator.setVisibility(View.VISIBLE);
+                mEmptyStateTextView.setVisibility(View.GONE);
+                //loadingIndicator.setVisibility(View.VISIBLE);
+                cnt++;
                 // Get a reference to the ConnectivityManager to check state of network connectivity
                 ConnectivityManager connMgr = (ConnectivityManager)
                         getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -107,28 +115,34 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
                 // Get details on the currently active default data network
                 NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
 
+                mAdapter.clear();
+
                 // If there is a network connection, fetch data
                 if (networkInfo != null && networkInfo.isConnected()) {
                     // Get a reference to the LoaderManager, in order to interact with loaders.
                     LoaderManager loaderManager = getLoaderManager();
 
+
                     // Initialize the loader. Pass in the int ID constant defined above and pass in null for
                     // the bundle. Pass in this activity for the LoaderCallbacks parameter (which is valid
                     // because this activity implements the LoaderCallbacks interface).
-                    loaderManager.initLoader(EARTHQUAKE_LOADER_ID, null, EarthquakeActivity.this);
+                    loaderManager.initLoader(cnt, null, EarthquakeActivity.this);
                 } else {
                     // Otherwise, display error
                     // First, hide loading indicator so error message will be visible
-                    View loadingIndicator = findViewById(R.id.loading_indicator);
+                    //loadingIndicator = findViewById(R.id.loading_indicator);
                     loadingIndicator.setVisibility(View.GONE);
+
                     mAdapter.clear();
                     // Update empty state with no connection error message
                     mEmptyStateTextView.setText(R.string.no_internet_connection);
                     mEmptyStateTextView.setVisibility(View.VISIBLE);
                 }
+
+                // TODO Auto-generated method stub
             }
         });
-    }
+    };
 
 
     @Override
@@ -143,17 +157,20 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
         View loadingIndicator = findViewById(R.id.loading_indicator);
         loadingIndicator.setVisibility(View.GONE);
 
-        // Set empty state text to display "No earthquakes found."
-        mEmptyStateTextView.setText(R.string.no_earthquakes);
-
         // Clear the adapter of previous earthquake data
-        //mAdapter.clear();
+        mAdapter.clear();
 
         // If there is a valid list of {@link Earthquake}s, then add them to the adapter's
         // data set. This will trigger the ListView to update.
         if (earthquakes != null && !earthquakes.isEmpty()) {
+            mEmptyStateTextView.setVisibility(View.GONE);
             mAdapter.addAll(earthquakes);
             //updateUi(earthquakes);
+        }
+        else{
+            // Set empty state text to display "No earthquakes found."
+            mEmptyStateTextView.setText(R.string.no_earthquakes);
+            mEmptyStateTextView.setVisibility(View.VISIBLE);
         }
     }
 
